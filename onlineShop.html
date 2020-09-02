@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.2.617/styles/kendo.nova.min.css" />
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2020.2.617/js/kendo.all.min.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="menu-wrapper">
+            <div id="navigation">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div id="user">
+                <a href="#">Login</a>
+                <a href="#">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="searchBar">
+            <img src="images/online-shop-logo.png" alt="Logo">
+            <div id="searchBox">
+                <input id="combobox" class="searchField" type="text" placeholder="Search products">
+                <span class="k-icon k-i-search"></span>
+            </div>
+        </div>
+        <div id="listView"></div>
+        <script type="text/x-kendo-tmpl" id="template">
+        <div id="product-${ProductID}" class="product k-card k-card-actions-vertical ${!UnitsInStock ? "outOfStock" : "" }">
+            <div class="productImage">
+                <img class="k-card-image" src="https://demos.telerik.com/kendo-ui/content/web/foods/${ProductID}.jpg"
+                    width=200px alt="${ProductName}">
+            </div>
+            <div class="k-card-body">
+                <h3 class="title">${ProductName}</h3>
+            </div>
+            <hr class="splitter">
+            <div class="k-card-actions-vertical">
+                <p class="price">$ ${UnitPrice.toFixed(2)}</p>                
+                <button class="k-button k-flat k-primary" ${!UnitsInStock ? "disabled" : "" }>Add to cart</button>
+                <button id="open-${ProductID}"class="k-button k-flat k-primary" ${!UnitsInStock ? "disabled" : "" }>Check availability</button>
+            </div>  
+            <div id="popup-${ProductID}" class='popup'>
+                <p>In stock: ${UnitsInStock}</p>
+                <hr class="splitter">
+                <p>Expected delivery: ${DeliveryOn.toLocaleDateString("en-US")}</p>
+            </div>    
+        </div>
+       
+        </script>
+
+    </div>
+    <div id="pager" class="k-pager-wrap"></div>
+    <script src="onlineShop.js"></script>
+</body>
+
+</html>

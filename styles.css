@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: rawline,sans-serif,helvetica neue,Helvetica,Arial,sans-serif;
+    background-color: #F8F8F8;
+}
+#container, #menu-wrapper{
+    width:80%;
+    margin:auto;
+}
+
+#listView{
+    border: none;
+    /* width: 70%; */
+    margin:auto;
+    margin-bottom: 3%;
+    text-align: justify;
+    background-color: #F8F8F8;
+}
+
+.product{
+    display: inline-block;
+    margin: 25px;
+    border: none;
+    width: 250px;
+    padding: 11px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform .5s
+}
+.product:hover{
+    transform: scale(1.05);
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.productImage{
+    width: 200px;
+    margin: auto;
+}
+
+.splitter{
+    position: relative;
+    height: 1px;
+    border: none;
+    background-color: lightgray;
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+}
+.k-card-image{
+    margin: auto;
+}
+.k-button{
+   font-size: 17px;
+}
+.title{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 22px;
+}
+.price{
+    text-align: right;
+    font-size:20px;
+    margin-right: 13px;
+    margin-bottom: 3px;
+}
+
+.popup{
+    width: 262.5px;
+    height: 421.05px;
+    background-color: rgba(0,0,0,0.85);
+    color: white;
+}
+.popup p{
+    margin-top: 30%;
+    margin-bottom: 20%;
+    text-align: center;
+    font-size:27px;
+    line-height: 1.5em;
+}
+.popup .splitter{
+    margin-top:30%
+}
+#menu{
+    width: 100%;
+    background-color:#083D51;
+    height: 40px;
+    display: flex;
+}
+#menu a{
+    font-family: Arial;
+    color:white;
+    text-decoration: none;
+}
+#navigation{
+    display: inline-block;
+}
+#user{
+    float: right;
+}
+#searchBar{
+margin:3%
+}
+#searchBar img{
+    width: 100px;
+}
+#searchBox{
+       display: inline-block;
+       position: absolute;
+       padding: 8px;
+       border-radius: 50px;
+       border: 1px solid lightgray;
+       height: 21px;
+       margin-top: 30px;
+       margin-left: 30px;
+       width: 40%;
+}
+.searchField{
+ border: none;
+ outline: none;
+ width: 90%;
+ background-color: #F8F8F8;
+}
+.k-i-search{
+    float: right;
+}
+.outOfStock{
+    opacity: 0.4;
+}
+
+
